@@ -6,7 +6,7 @@
 
     function Framework() {
         return {
-            transclude: false,
+            transclude: true,
             scope: {
                 title: '@',
                 subtitle: '@',

@@ -81,6 +81,11 @@
     <Content Include="ext-modules\jnFramework\jnFrameworkDirective.js" />
     <Content Include="ext-modules\jnFramework\jnFrameworkModule.js" />
     <Content Include="ext-modules\jnFramework\jnFrameworkTemplate.html" />
+    <Content Include="ext-modules\jnMenu\jnMenu.css" />
+    <Content Include="ext-modules\jnMenu\jnMenuController.js" />
+    <Content Include="ext-modules\jnMenu\jnMenuDirective.js" />
+    <Content Include="ext-modules\jnMenu\jnMenuItemDirective.js" />
+    <Content Include="ext-modules\jnMenu\jnMenuItemTemplate.html" />
     <Content Include="ext-modules\jnMenu\jnMenuModule.js" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -104,6 +109,7 @@
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="ext-modules\jnMenu\jnMenuTemplate.html" />
     <None Include="Scripts\jquery-2.2.4.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
