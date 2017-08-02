@@ -1,0 +1,55 @@
+﻿
+.jn-title-bar {
+    background-color: white;
+    padding: 0 20px;
+    border-bottom: 2px solid black;
+}
+
+.jn-logo-area {
+    text-align: center;
+}
+
+.jn-title-area {
+    display: inline-block;
+    text-align: center;
+}
+
+.jn-icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 8px;
+    vertical-align: top;
+    border: 1px solid #999;
+}
+
+.jn-logo-title {
+    color: #111;
+    margin-top: 6px;
+    font-size: 22px;
+}
+
+.jn-logo-subtitle {
+    margin-top: -13px;
+    font-size: 13px;
+}
+
+.jn-right-side-controls {
+    line-height: 60px;
+}
+
+    .jn-right-side-controls > div {
+        text-align: center;
+    }
+
+@media screen and (min-width:768px) {
+    .jn-right-side-controls > div {
+        text-align: right;
+    }
+    .jn-title-area {
+        text-align: left;
+    }
+    .jn-logo-area{
+        text-align: left;
+    }
+}
