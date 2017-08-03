@@ -7,7 +7,16 @@
                 <p class="jn-logo-title">{{title}}</p>
                 <p class="jn-logo-subtitle">{{subtitle}}</p>
             </div>
+
+            <div ng-if="isMenuButtonVisible" ng-click="menuButtonClicked()" 
+                 class="jn-collapsed-menu pull-right">
+                <button type="button" class="btn jn-nav-button">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
         </div>
+
+
         <div class="jn-right-side-controls col-sm-6">
             <div>
                 <button class="btn btn-primary">Button 1</button>
@@ -18,3 +27,6 @@
     </div>
 </div>
 <div ng-transclude></div>
+<div style="position:absolute; left:220px; top:200px; color:red; font-size:44px;">
+    {{routeString}}
+</div>
