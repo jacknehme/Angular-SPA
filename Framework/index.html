@@ -20,6 +20,7 @@
     <script src="ext-modules/jnMenu/jnMenuController.js"></script>
     <script src="ext-modules/jnMenu/jnMenuDirective.js"></script>
     <script src="ext-modules/jnMenu/jnMenuItemDirective.js"></script>
+    <script src="ext-modules/jnMenu/jnMenuGroupDirective.js"></script>
 
     <script src="ext-modules/jnDashboard/jnDashboardModule.js"></script>
 
@@ -39,6 +40,11 @@
             <jn-menu-item label="Dashboard" icon="fa-tachometer" route="dashboard"></jn-menu-item>
             <jn-menu-item label="Locations" icon="fa-location-arrow" route="locations"></jn-menu-item>
             <jn-menu-item label="Raft Guides" icon="fa-user" route="guides"></jn-menu-item>
+            <jn-menu-group label="Equipment" icon="fa-gears">
+                <jn-menu-item label="Rafts" icon="fa-unlink" route="rafts"></jn-menu-item>
+                <jn-menu-item label="Paddles" icon="fa-magic" route="paddles"></jn-menu-item>
+                <jn-menu-item label="Life Vests" icon="fa-life-ring" route="vests"></jn-menu-item>
+            </jn-menu-group>
         </jn-menu>
     </jn-framework>
 

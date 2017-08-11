@@ -1,0 +1,11 @@
+﻿<li class="jn-selectable-item" ng-click="clicked()" ng-class="{'jn-item-horizontal':!isVertical()}">
+    <div class="jn-noselect">
+        <i class="fa {{icon}} jn-menu-icon"></i>
+        {{label}}
+        <i class="fa fa-chevron-left jn-group-indicator-left"
+           ng-class="{'fa-rotate-270': isOpen}"></i>
+    </div>
+</li>
+<div ng-show="isOpen" class="jn-subitem-section">
+    <ul ng-transclude></ul>
+</div>

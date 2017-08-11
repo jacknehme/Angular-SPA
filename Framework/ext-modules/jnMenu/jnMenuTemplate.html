@@ -1,3 +1,7 @@
-﻿<div class="jn-menu-area" ng-show="showMenu">
-    <ul class="jn-menu" ng-transclude></ul>   
+﻿<!--<div class="jn-menu-area" ng-show="showMenu">-->
+<div class="jn-menu-area" ng-class="{'jn-menu-area-vertical':isVertical, 'jn-menu-area-horizontal': !isVertical}">
+    <ul class="jn-menu" ng-transclude></ul>
+    <a class="btn jn-menu-layout-button" ng-click="toggleMenuOrientation()">
+        <i class="fa fa-chevron-up"></i>
+    </a>
 </div>

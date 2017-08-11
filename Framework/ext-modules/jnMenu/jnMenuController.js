@@ -4,7 +4,8 @@
     angular.module('jnMenu').controller('jnMenuController', ['$scope', '$rootScope', jnMenuController])
 
     function jnMenuController($scope, $rootScope) {
-        $scope.showMenu = true;
+        //$scope.showMenu = true;
+        $scope.isVertical = true;
 
         this.getActiveElement = function () {
             return $scope.activeElement;
@@ -16,9 +17,21 @@
             $rootScope.$broadcast('jn-menu-item-selected-event', {route: route})
         }
 
-        $scope.$on('jn-menu-show', function (evt,data) {
-            $scope.showMenu = data.show;
-        })
+        this.isVertical = function () {
+            return $scope.isVertical;
+        }
+
+        $scope.toggleMenuOrientation = function () {
+            $scope.isVertical = !$scope.isVertical;
+
+            $rootScope.$broadcast('jn-menu-orientation-changed-event', { isMenuVertical: $scope.isVertical });
+
+        }
+
+        //$scope.$on('jn-menu-show', function (evt,data) {
+        //    $scope.showMenu = data.show;
+        //})
+
     }
 
 })();

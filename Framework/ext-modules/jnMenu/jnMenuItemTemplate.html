@@ -1,7 +1,7 @@
-﻿<li class="jn-selectable-item jn-noselect">
+﻿<li class="jn-selectable-item" ng-class="{'jn-item-horizontal':!isVertical()}">
     <div class="jn-noselect">
         <i class="fa {{icon}} jn-menu-icon"></i>
-           {{label}}
+        {{label}}
     </div>
     <i class="fa fa-2x fa-caret-left jn-menu-active-indicator" ng-if="isActive()"></i>
 </li>

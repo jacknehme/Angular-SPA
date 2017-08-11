@@ -8,12 +8,18 @@
     function FrameworkController($rootScope, $scope, $window, $timeout) {
         $scope.isMenuVisible = true;
         $scope.isMenuButtonVisible = true;
+        $scope.isMenuVertical = true;
 
         $scope.$on('jn-menu-item-selected-event', function (evt, data) {
             $scope.routeString = data.route;
             checkWidth();
             broadcastMenuState();
         })
+
+        $scope.$on("jn-menu-orientation-changed-event", function (evt, data) {
+            $scope.isMenuVertical = data.isMenuVertical;
+        })
+
         $($window).on('resize.jnFramework', function () {
             $scope.$apply(function () {
                 checkWidth();

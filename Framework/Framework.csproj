@@ -84,6 +84,8 @@
     <Content Include="ext-modules\jnMenu\jnMenu.css" />
     <Content Include="ext-modules\jnMenu\jnMenuController.js" />
     <Content Include="ext-modules\jnMenu\jnMenuDirective.js" />
+    <Content Include="ext-modules\jnMenu\jnMenuGroupDirective.js" />
+    <Content Include="ext-modules\jnMenu\jnMenuGroupTemplate.html" />
     <Content Include="ext-modules\jnMenu\jnMenuItemDirective.js" />
     <Content Include="ext-modules\jnMenu\jnMenuItemTemplate.html" />
     <Content Include="ext-modules\jnMenu\jnMenuModule.js" />
