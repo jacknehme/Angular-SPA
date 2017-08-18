@@ -3,5 +3,6 @@
         <i class="fa {{icon}} jn-menu-icon"></i>
         {{label}}
     </div>
-    <i class="fa fa-2x fa-caret-left jn-menu-active-indicator" ng-if="isActive()"></i>
+    <i ng-if="isActive() && isVertical()"
+       class="fa fa-2x fa-caret-left jn-menu-active-indicator"></i>
 </li>

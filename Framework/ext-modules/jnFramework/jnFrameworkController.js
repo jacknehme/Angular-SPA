@@ -38,12 +38,14 @@
         $scope.menuButtonClicked = function () {
             $scope.isMenuVisible = !$scope.isMenuVisible;
             broadcastMenuState();
-            //$scope.$apply();
+            //$scope.$apply();  <-- this is causing an error?
         }
 
         var broadcastMenuState = function () {
             $rootScope.$broadcast('jn-menu-show', {
-                show: $scope.isMenuVisible
+                show: $scope.isMenuVisible,
+                isVertical: $scope.isMenuVertical,
+                allowHorizontalToggle: !$scope.isMenuButtonVisible
             })
         }
 

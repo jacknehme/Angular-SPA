@@ -18,7 +18,7 @@
                 }
 
                 scope.isVertical = function () {
-                    return ctrl.isVertical();
+                    return ctrl.isVertical() || el.parents('.jn-subitem-section').length > 0;
                 }
 
                 el.on('click', function (evt) {
@@ -28,8 +28,6 @@
                         ctrl.setActiveElement(el);
                         ctrl.setRoute(scope.route);
                     })
-
-                    
                 })
             },
 

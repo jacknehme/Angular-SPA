@@ -2,6 +2,6 @@
 
     "use strict";
 
-    angular.module("jnMenu", []);
+    angular.module("jnMenu", ["ngAnimate"]);
 
 })();

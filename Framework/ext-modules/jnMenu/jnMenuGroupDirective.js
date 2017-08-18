@@ -19,12 +19,19 @@
                 }
                 scope.clicked = function () {
                     scope.isOpen = !scope.isOpen;
+                    if (el.parents('.jn-subitem-section').length == 0) {
+                        scope.setSubmenuPosition();
+                    }
+                    ctrl.setOpenMenuScope(scope);
                 }
                 scope.isVertical = function () {
-                    return ctrl.isVertical();
+                    return ctrl.isVertical() || el.parents('.jn-subitem-section').length > 0;
+                }
+                scope.setSubmenuPosition = function () {
+                    var pos = el.offset();
+                    $('.jn-subitem-section').css({ 'left': pos.left + 20, 'top': 36 });
                 }
             },
-
         }
     }
 

@@ -1,9 +1,9 @@
 ﻿(function () {
     "use strict";
 
-    angular.module('jnMenu').directive('jnMenu', jnMenuDirective);
+    angular.module('jnMenu').directive('jnMenu', ['$timeout',jnMenuDirective]);
 
-    function jnMenuDirective() {
+    function jnMenuDirective($timeout) {
         return {
             scope: {
 
@@ -13,7 +13,10 @@
             controller: 'jnMenuController',
             //controllerAs: 'jnMenuCtrl',
             link: function (scope, el, attr) {
-
+                var item = el.find('.jn-selectable-item:first');
+                $timeout(function () {
+                    item.trigger('click'); // this not working?
+                })
             },
             
         }

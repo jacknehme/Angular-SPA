@@ -89,6 +89,12 @@
     border: 1px solid #999;
 }
 
+.jn-layout-button-horizontal {
+    position: absolute;
+    top: -6px;
+    right: 10px;
+}
+
 .jn-item-horizontal {
     display: inline-block;
     width: 165px !important;
@@ -96,3 +102,22 @@
     margin-top: 5px;
     line-height: 1.5em !important;
 }
+
+.jn-popup-menu {
+    position: absolute;
+    z-index: 1000;
+    background-color: #333;
+    width: 200px;
+    padding-left: 0;
+}
+
+.jn-fade-in-animation {
+    -moz-transition: linear all 0.5s;
+    -o-transition: linear all 0.5s;
+    -webkit-transition: linear all 0.5s;
+    transition: linear all 0.5s;
+}
+
+    .jn-fade-in-animation.ng-hide {
+        opacity: 0;
+    }
