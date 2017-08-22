@@ -3,15 +3,16 @@
 
     angular.module("jnFramework").controller("jnFrameworkController", FrameworkController);
 
-    FrameworkController.$inject = ['$rootScope', '$scope', '$window', '$timeout'];
+    FrameworkController.$inject = ['$rootScope', '$scope', '$window', '$timeout', '$location'];
 
-    function FrameworkController($rootScope, $scope, $window, $timeout) {
+    function FrameworkController($rootScope, $scope, $window, $timeout, $location) {
         $scope.isMenuVisible = true;
         $scope.isMenuButtonVisible = true;
         $scope.isMenuVertical = true;
 
         $scope.$on('jn-menu-item-selected-event', function (evt, data) {
             $scope.routeString = data.route;
+            $location.path(data.route);
             checkWidth();
             broadcastMenuState();
         })
