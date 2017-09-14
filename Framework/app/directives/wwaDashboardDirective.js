@@ -2,7 +2,7 @@
 
     "use strict";
 
-    angular.module("app").directive("wwaDashboard", [wwaDashboard]);
+    angular.module("app").directive("wwaDashboard", wwaDashboard);
 
     function wwaDashboard() {
         return {
@@ -24,11 +24,38 @@
                 scope.widgets = [
                     {
                         title: 'First',
-                        sizeX: 3,
-                        sizeY: 3,
+                        sizeX: 1,
+                        sizeY: 1,
+                        minSizeX: 1,
+                        minSizeY: 1,
                         row: 0,
                         col: 0,
-                        template: '<wwa-temperature></wwa-temperature>'
+                        template: '<wwa-temperature></wwa-temperature>',
+                        widgetSettings: {
+                            id: 1000
+                        }
+                    },
+                    {
+                        title: 'Second',
+                        sizeX: 2,
+                        sizeY: 1,
+                        row: 0,
+                        col: 5,
+                        template: '<wwa-employee></wwa-employee>',
+                        widgetSettings: {
+                            id: 5001
+                        }
+                    },
+                    {
+                        title: 'Third',
+                        sizeX: 2,
+                        sizeY: 1,
+                        row: 3,
+                        col: 5,
+                        template: '<wwa-inventory></wwa-inventory>',
+                        widgetSettings: {
+                            id: 1002
+                        }
                     },
                     //{
                     //    title: 'Second',
@@ -37,7 +64,7 @@
                     //    row: 0,
                     //    col: 5
                     //},
-                    
+
                 ];
             }
         }

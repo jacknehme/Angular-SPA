@@ -1,89 +1,84 @@
 ﻿(function () {
     "use strict";
 
-    angular.module('app').factory('dataService', ['$timeout', dataService]);
+    angular.module('app').factory('dataService', dataService);
+
+    dataService.$inject = ['$timeout'];
 
     function dataService($timeout) {
-        return {
-            getLocations: getLocations,
-            getLocation: getLocation,
-            getEmployees: getEmployees,
-            getEmployee: getEmployee
-        }
-
         var locations = [
-            {
-                id: 1000,
-                name: 'Raquette River',
-                temperature: 55,
-                guides: 20,
-                rafts: 18,
-                vests: 200,
-                image: 'river1.png'
-            },
-            {
-                id: 1001,
-                name: 'Black River',
-                temperature: 53,
-                guides: 36,
-                rafts: 22,
-                vests: 250,
-                image: 'river2.png'
-            },
-            {
-                id: 1002,
-                name: 'Hudson River',
-                temperature: 58,
-                guides: 56,
-                rafts: 40,
-                vests: 500,
-                image: 'river3.png'
-            },
-            {
-                id: 1003,
-                name: 'Hudson Gorge',
-                temperature: 39,
-                guides: 8,
-                rafts: 10,
-                vests: 40,
-                image: 'river4.png'
-            },
-            {
-                id: 1004,
-                name: 'Saranac River',
-                temperature: 32,
-                guides: 8,
-                rafts: 8,
-                vests: 100,
-                image: 'river1.png'
-            },
-            {
-                id: 1005,
-                name: 'Black Creek',
-                temperature: 34,
-                guides: 22,
-                rafts: 12,
-                vests: 230,
-                image: 'river2.png'
-            },
-            {
-                id: 1006,
-                name: 'Batten Kill',
-                temperature: 54,
-                guides: 20,
-                rafts: 24,
-                vests: 420,
-                image: 'river3.png'
-            },
-            {
-                id: 1007,
-                name: 'Ausable River',
-                temperature: 38,
-                guides: 12,
-                rafts: 8,
-                vests: 225,
-                image: 'river4.png'
-            },
+           {
+               id: 1000,
+               name: 'Raquette River',
+               temperature: 55,
+               guides: 20,
+               rafts: 18,
+               vests: 200,
+               image: 'river1.png'
+           },
+           {
+               id: 1001,
+               name: 'Black River',
+               temperature: 53,
+               guides: 36,
+               rafts: 22,
+               vests: 250,
+               image: 'river2.png'
+           },
+           {
+               id: 1002,
+               name: 'Hudson River',
+               temperature: 58,
+               guides: 56,
+               rafts: 40,
+               vests: 500,
+               image: 'river3.png'
+           },
+           {
+               id: 1003,
+               name: 'Hudson Gorge',
+               temperature: 39,
+               guides: 8,
+               rafts: 10,
+               vests: 40,
+               image: 'river4.png'
+           },
+           {
+               id: 1004,
+               name: 'Saranac River',
+               temperature: 32,
+               guides: 8,
+               rafts: 8,
+               vests: 100,
+               image: 'river1.png'
+           },
+           {
+               id: 1005,
+               name: 'Black Creek',
+               temperature: 34,
+               guides: 22,
+               rafts: 12,
+               vests: 230,
+               image: 'river2.png'
+           },
+           {
+               id: 1006,
+               name: 'Batten Kill',
+               temperature: 54,
+               guides: 20,
+               rafts: 24,
+               vests: 420,
+               image: 'river3.png'
+           },
+           {
+               id: 1007,
+               name: 'Ausable River',
+               temperature: 38,
+               guides: 12,
+               rafts: 8,
+               vests: 225,
+               image: 'river4.png'
+           },
         ]
 
         var employees = [
@@ -119,13 +114,21 @@
             },
         ]
 
-        var getLocations = function () {
+        var service = {
+            getLocations: getLocations,
+            getLocation: getLocation,
+            getEmployees: getEmployees,
+            getEmployee: getEmployee
+        };
+        return service;
+        
+        function getLocations() {
             return $timeout(function () {
                 return locations;
             }, 500);
         }
 
-        var getLocation = function (id) {
+        function getLocation(id) {
             return $timeout(function () {
                 for (var i = 0; i < locations.length; i++) {
                     if (locations[i].id == id) {
@@ -135,13 +138,13 @@
                 return undefined;
             }, 300);
         }
-        var getEmployees = function () {
+        function getEmployees() {
             return $timeout(function () {
                 return employees;
             }, 500);
         }
 
-        var getEmployee = function (id) {
+        function getEmployee(id) {
             return $timeout(function () {
                 for (var i = 0; i < employees.length; i++) {
                     if (employees[i].id == id) {
