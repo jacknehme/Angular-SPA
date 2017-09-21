@@ -2,6 +2,6 @@
 
     "use strict";
 
-    angular.module("jnDashboard", ["gridster"]);
+    angular.module("jnDashboard", ["gridster", "ui.bootstrap"]);
 
 })();

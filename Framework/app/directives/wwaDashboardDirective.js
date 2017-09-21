@@ -12,60 +12,62 @@
 
                 scope.title = 'My First Dashboard';
 
-                scope.gridsterOpt = {
+                scope.gridsterOpts = {
                     columns: 12,
                     margins: [20, 20],
                     outerMargin: false,
                     pushing: true,
-                    floating: true,
-                    swaping: true
-                }
+                    floating: false,
+                    swapping: false
+                };
 
-                scope.widgets = [
-                    {
-                        title: 'First',
-                        sizeX: 1,
+                scope.widgetDefinitions = [{
+                    title: 'Temperature',
+                    settings: {
+                        sizeX: 2,
                         sizeY: 1,
-                        minSizeX: 1,
+                        minSizeX: 2,
                         minSizeY: 1,
-                        row: 0,
-                        col: 0,
                         template: '<wwa-temperature></wwa-temperature>',
                         widgetSettings: {
-                            id: 1000
+                            id: 1000,
+                            templateUrl: 'app/dialogs/wwaSelectLocationTemplate.html',
+                            controller: 'wwaSelectLocationController'
                         }
-                    },
-                    {
-                        title: 'Second',
-                        sizeX: 2,
-                        sizeY: 1,
-                        row: 0,
-                        col: 5,
-                        template: '<wwa-employee></wwa-employee>',
-                        widgetSettings: {
-                            id: 5001
-                        }
-                    },
-                    {
-                        title: 'Third',
-                        sizeX: 2,
-                        sizeY: 1,
-                        row: 3,
-                        col: 5,
+                    }
+                },
+                {
+                    title: 'Inventory',
+                    settings: {
+                        sizeX: 4,
+                        sizeY: 2,
+                        minSizeX: 2,
+                        minSizeY: 1,
                         template: '<wwa-inventory></wwa-inventory>',
                         widgetSettings: {
-                            id: 1002
+                            id: 1002,
+                            templateUrl: 'app/dialogs/wwaSelectLocationTemplate.html',
+                            controller: 'wwaSelectLocationController'
                         }
-                    },
-                    //{
-                    //    title: 'Second',
-                    //    sizeX: 2,
-                    //    sizeY: 4,
-                    //    row: 0,
-                    //    col: 5
-                    //},
+                    }
+                },
+                {
+                    title: 'Employee',
+                    settings: {
+                        sizeX: 4,
+                        sizeY: 2,
+                        minSizeX: 2,
+                        minSizeY: 1,
+                        template: '<wwa-employee></wwa-employee>',
+                        widgetSettings: {
+                            id: 5000,
+                            templateUrl: 'app/dialogs/wwaSelectEmployeeTemplate.html',
+                            controller: 'wwaSelectEmployeeController'
+                        }
+                    }
+                }];
 
-                ];
+                scope.widgets = [];
             }
         }
     };

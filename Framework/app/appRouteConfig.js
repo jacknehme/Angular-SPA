@@ -15,7 +15,7 @@
             {
                 url: '/locations',
                 config: {
-                    template: '<wwa-locations></wwa-locations>'
+                    template: '<wwa-location></wwa-location>'
                 }
             },
             {

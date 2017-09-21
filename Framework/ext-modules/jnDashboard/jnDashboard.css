@@ -47,3 +47,27 @@
     padding: 8px;
     padding-left: 20px;
 }
+
+.jn-dashboard-controls {
+    float: right;
+}
+
+.jn-widget-menu-area {
+    position: absolute;
+    top: 0;
+    right: 8px;
+    font-size: 22px;
+}
+
+.jn-widget-menu-area .dropdown-menu {
+    left: -20px;
+    padding-left: 15px;
+}
+
+.jn-widget-menu-area a {
+    color: white;
+}
+
+.jn-widget-menu-area i {
+    cursor: pointer;
+}

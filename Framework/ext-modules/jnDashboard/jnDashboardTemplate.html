@@ -1,5 +1,22 @@
 ﻿<div class="jn-dashboard-header">
-    {{title}}   
+    {{title}}
+    <div class="jn-dashboard-controls pull-right">
+
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                <i class="fa fa-plus"></i>
+                Add Widget
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li ng-repeat="widget in widgetDefinitions">
+                    <a role="menuitem" ng-click="addNewWidget(widget)">{{widget.title}}</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
 </div>
 
 <div gridster="gridsterOpts">
@@ -9,7 +26,7 @@
                 <span>{{item.title}}</span>
                 <div class="jn-widget-header-buttons">
                     <button class="btn btn-default pull-right">
-                        <i class="fa fa-remove"/> 
+                        <i class="fa fa-remove"/>
                     </button>
                     <button class="btn btn-default pull-right">
                         <i class="fa fa-gear" />

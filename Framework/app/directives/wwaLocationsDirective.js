@@ -2,9 +2,9 @@
 
     "use strict";
 
-    angular.module("app").directive("wwaLocations", [wwaLocations]);
+    angular.module("app").directive("wwaLocation", [wwaLocation]);
 
-    function wwaLocations() {
+    function wwaLocation() {
         return {
             scope: {},
             template: '<h1>Locations Page</h1>'
