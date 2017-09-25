@@ -25,6 +25,12 @@
                     }
                     $uibModal.open(options);
                 }
+
+                scope.iconClicked = function () {
+                    //empty body
+                    // this function is used by ng-click in the template
+                    // so that icon clicks aren't intercetped by widgets
+                }
             }
         }
     };

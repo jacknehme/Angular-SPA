@@ -1,5 +1,4 @@
-﻿
-<div class="jn-title-bar">
+﻿<div class="jn-title-bar">
     <div class="row">
         <div class="jn-logo-area col-sm-6">
             <img ng-src="{{iconFile}}" alt="kayak" class="jn-icon" />
@@ -8,7 +7,7 @@
                 <p class="jn-logo-subtitle">{{subtitle}}</p>
             </div>
 
-            <div ng-if="isMenuButtonVisible" ng-click="menuButtonClicked()" 
+            <div ng-if="isMenuButtonVisible" ng-click="menuButtonClicked()"
                  class="jn-collapsed-menu pull-right">
                 <button type="button" class="btn jn-nav-button">
                     <i class="fa fa-bars"></i>
@@ -18,15 +17,18 @@
 
 
         <div class="jn-right-side-controls col-sm-6">
-            <div>
-                <button class="btn btn-primary">Button 1</button>
-                <button class="btn btn-success">Button 2</button>
-                <button class="btn btn-warning">Button 3</button>
-            </div>
+            <jn-user-profile-small></jn-user-profile-small>
         </div>
     </div>
 </div>
-<div ng-transclude></div>
-<div ng-view class="jn-view" 
+
+<div class="jn-menu-area"
+     ng-show="isMenuVisible"
+     ng-class="{'jn-menu-area-vertical': isMenuVertical, 'jn-menu-area-horizontal': !isMenuVertical}">
+    <jn-user-profile></jn-user-profile>
+    <ng-transclude></ng-transclude>
+</div>
+
+<div ng-view class="jn-view"
      ng-class="{'jn-view-full-width': !isMenuVertical || !isMenuVisible}">
 </div>

@@ -19,6 +19,9 @@
 
         $scope.$on("jn-menu-orientation-changed-event", function (evt, data) {
             $scope.isMenuVertical = data.isMenuVertical;
+            $timeout(function () {
+                $($window).tigger('resize');
+            }, 0);
         })
 
         $($window).on('resize.jnFramework', function () {
@@ -39,7 +42,6 @@
         $scope.menuButtonClicked = function () {
             $scope.isMenuVisible = !$scope.isMenuVisible;
             broadcastMenuState();
-            //$scope.$apply();  <-- this is causing an error?
         }
 
         var broadcastMenuState = function () {

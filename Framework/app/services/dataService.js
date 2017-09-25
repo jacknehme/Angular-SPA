@@ -129,14 +129,18 @@
         }
 
         function getLocation(id) {
-            return $timeout(function () {
+            var timeout = $timeout(function () {
+                //$timeout.cancel(timeout);
+                //return undefined;
                 for (var i = 0; i < locations.length; i++) {
                     if (locations[i].id == id) {
                         return locations[i];
                     }
                 }
                 return undefined;
-            }, 300);
+            }, 2000);
+
+            return timeout;
         }
         function getEmployees() {
             return $timeout(function () {

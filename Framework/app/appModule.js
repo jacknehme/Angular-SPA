@@ -2,6 +2,6 @@
 
     "use strict";
 
-    angular.module("app", ["ngRoute", "jnFramework"]);
+    angular.module("app", ["ngRoute", "jnFramework", "ngStorage"]);
 
 })();

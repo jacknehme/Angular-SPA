@@ -2,9 +2,9 @@
 
     "use strict";
 
-    angular.module("app").directive("wwaDashboard", wwaDashboard);
+    angular.module("app").directive("wwaDashboard", ["$localStorage", wwaDashboard]);
 
-    function wwaDashboard() {
+    function wwaDashboard($localStorage) {
         return {
             scope: {},
             template: '<jn-dashboard></jn-dashboard>',
@@ -25,9 +25,9 @@
                     title: 'Temperature',
                     settings: {
                         sizeX: 2,
-                        sizeY: 1,
+                        sizeY: 2,
                         minSizeX: 2,
-                        minSizeY: 1,
+                        minSizeY: 2,
                         template: '<wwa-temperature></wwa-temperature>',
                         widgetSettings: {
                             id: 1000,
@@ -42,7 +42,7 @@
                         sizeX: 4,
                         sizeY: 2,
                         minSizeX: 2,
-                        minSizeY: 1,
+                        minSizeY: 2,
                         template: '<wwa-inventory></wwa-inventory>',
                         widgetSettings: {
                             id: 1002,
@@ -57,7 +57,7 @@
                         sizeX: 4,
                         sizeY: 2,
                         minSizeX: 2,
-                        minSizeY: 1,
+                        minSizeY: 2,
                         template: '<wwa-employee></wwa-employee>',
                         widgetSettings: {
                             id: 5000,
@@ -67,7 +67,11 @@
                     }
                 }];
 
-                scope.widgets = [];
+                scope.widgets = $localStorage.widgets || [];
+
+                scope.$watch('widgets', function () {
+                    $localStorage.widgets = scope.widgets;
+                }, true);
             }
         }
     };

@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="app\app.css" />
     <Content Include="app\appConfig.js" />
+    <Content Include="app\appController.js" />
     <Content Include="app\appModule.js" />
     <Content Include="app\appRouteConfig.js" />
     <Content Include="app\dialogs\wwaSelectEmployeeController.js" />
@@ -94,17 +95,25 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\ui-bootstrap-csp.css" />
+    <Content Include="dist\jnFramework.css" />
+    <Content Include="dist\jnFramework.js" />
     <Content Include="ext-modules\jnDashboard\jnDashboard.css" />
     <Content Include="ext-modules\jnDashboard\jnDashboardDirective.js" />
     <Content Include="ext-modules\jnDashboard\jnDashboardModule.js" />
     <Content Include="ext-modules\jnDashboard\jnDashboardTemplate.html" />
     <Content Include="ext-modules\jnDashboard\jnWidgetBodyDirective.js" />
     <Content Include="ext-modules\jnDashboard\jnWidgetBodyTemplate.html" />
+    <Content Include="ext-modules\jnDashboard\templates.js" />
     <Content Include="ext-modules\jnFramework\jnFramework.css" />
     <Content Include="ext-modules\jnFramework\jnFrameworkController.js" />
     <Content Include="ext-modules\jnFramework\jnFrameworkDirective.js" />
     <Content Include="ext-modules\jnFramework\jnFrameworkModule.js" />
     <Content Include="ext-modules\jnFramework\jnFrameworkTemplate.html" />
+    <Content Include="ext-modules\jnFramework\jnUserProfile\jnUserProfileDirective.js" />
+    <Content Include="ext-modules\jnFramework\jnUserProfile\jnUserProfileSmallDirective.js" />
+    <Content Include="ext-modules\jnFramework\jnUserProfile\jnUserProfileSmallTemplate.html" />
+    <Content Include="ext-modules\jnFramework\jnUserProfile\jnUserProfileTemplate.html" />
+    <Content Include="ext-modules\jnFramework\templates.js" />
     <Content Include="ext-modules\jnMenu\jnMenu.css" />
     <Content Include="ext-modules\jnMenu\jnMenuController.js" />
     <Content Include="ext-modules\jnMenu\jnMenuDirective.js" />
@@ -113,8 +122,10 @@
     <Content Include="ext-modules\jnMenu\jnMenuItemDirective.js" />
     <Content Include="ext-modules\jnMenu\jnMenuItemTemplate.html" />
     <Content Include="ext-modules\jnMenu\jnMenuModule.js" />
+    <Content Include="ext-modules\jnMenu\templates.js" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="gulpfile.js" />
     <Content Include="images\employee-andy.png" />
     <Content Include="images\employee-april.png" />
     <Content Include="images\employee-don.png" />
@@ -131,6 +142,7 @@
     <Content Include="images\river4.png" />
     <Content Include="images\therm-icon.png" />
     <Content Include="images\vest-icon.png" />
+    <Content Include="index-old.html" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -160,6 +172,7 @@
     <Content Include="packages\FontAwesome.4.7.0\Content\Content\font-awesome.css" />
     <Content Include="packages\FontAwesome.4.7.0\Content\Content\font-awesome.min.css" />
     <Content Include="packages\FontAwesome.4.7.0\Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="package.json" />
     <None Include="packages\jQuery.2.2.4\Content\Scripts\jquery-2.2.4-vsdoc.js" />
     <Content Include="packages\jQuery.2.2.4\Content\Scripts\jquery-2.2.4.js" />
     <Content Include="packages\jQuery.2.2.4\Content\Scripts\jquery-2.2.4.min.js" />
@@ -282,6 +295,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\ngStorage.js" />
+    <Content Include="Scripts\ngStorage.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -1,8 +1,6 @@
-﻿<div class="jn-menu-area" 
-     ng-show="showMenu"
-     ng-class="{'jn-menu-area-vertical':isVertical, 'jn-menu-area-horizontal': !isVertical}">
+﻿<div>
     <ul class="jn-menu" ng-transclude></ul>
-    <a class="btn jn-menu-layout-button" 
+    <a class="btn jn-menu-layout-button"
        ng-show="allowHorizontalToggle"
        ng-class="{'jn-layout-button-horizontal':!isVertical}"
        ng-click="toggleMenuOrientation()">

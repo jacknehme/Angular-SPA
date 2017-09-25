@@ -59,15 +59,21 @@
     font-size: 22px;
 }
 
-.jn-widget-menu-area .dropdown-menu {
-    left: -20px;
-    padding-left: 15px;
-}
+    .jn-widget-menu-area .dropdown-menu {
+        left: -20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        min-width: 30px;
+    }
 
-.jn-widget-menu-area a {
-    color: white;
-}
+    .jn-widget-menu-area a {
+        color: white;
+    }
 
-.jn-widget-menu-area i {
-    cursor: pointer;
+    .jn-widget-menu-area i {
+        cursor: pointer;
+    }
+
+.dropdown-backdrop {
+    position: static;
 }
